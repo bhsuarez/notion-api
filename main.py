@@ -36,6 +36,7 @@ def create_database():
                 }
             }
         ],
+        # set up the database columns
         "properties": {
             "Name": {
                 "title": {}
