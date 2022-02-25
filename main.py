@@ -18,7 +18,6 @@ def get_database(database_id):
 
 
 def create_database():
-    name = input("Please enter a name for the database: ")
     import requests
 
     url = "https://api.notion.com/v1/databases"
@@ -32,23 +31,29 @@ def create_database():
             {
                 "type": "text",
                 "text": {
-                    "content": name
+                    "content": 'vinyls'
                 }
             }
         ],
         # set up the database columns
         "properties": {
-            "Name": {
-                "title": {}
+            "album_id": {
+                "number": {}
                     },
-            "Description": {
-                "rich_text": {}
+            "title": {
+                "text": {}
                 },
-            "album": {
-                "rich_text": {}
+            "artist_name": {
+                "text": {}
                 },
-            "album3": {
-                "rich_text": {}
+            "artist_id": {
+                "number": {}
+            },
+            "discogs_id": {
+                "number": {}
+            },
+            "barcode": {
+                "number": {}
             }
         }
     }
