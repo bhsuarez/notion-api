@@ -3,6 +3,7 @@ import requests
 from pprint import pprint
 
 
+#   Gets the database by database_id
 def get_database(database_id):
     url = "https://api.notion.com/v1/databases/" +database_id
 
@@ -13,10 +14,10 @@ def get_database(database_id):
     }
 
     response = requests.request("GET", url, headers=headers)
-
     pprint({response.text})
 
 
+#   Creates the vinyls database schema from /db/init.sql in the `main` branch
 def create_database():
     import requests
 
@@ -94,6 +95,7 @@ def create_database():
     print(response.text)
 
 
+#   Main method
 if __name__ == '__main__':
     #get_database(str(os.getenv('notion_database_id')))
     create_database()
