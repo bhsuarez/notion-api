@@ -31,31 +31,57 @@ def create_database():
             {
                 "type": "text",
                 "text": {
-                    "content": 'vinyls'
+                    "content": "vinyls!"
                 }
             }
         ],
         # set up the database columns
         "properties": {
-            "album_id": {
-                "number": {}
-                    },
-            "title": {
-                "text": {}
-                },
-            "artist_name": {
-                "text": {}
-                },
-            "artist_id": {
-                "number": {}
-            },
-            "discogs_id": {
-                "number": {}
-            },
-            "barcode": {
-                "number": {}
+        "album_id": {
+            "id": "0v;b",
+            "name": "album_id",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "title": {
+            "id": "title",
+            "name": "title",
+            "type": "title",
+            "title": {}
+        },
+        "artist_name": {
+            "id": "{v`m",
+            "name": "artist_name",
+            "type": "rich_text",
+            "rich_text": {}
+        },
+        "artist_id": {
+            "id": "3kfb",
+            "name": "artist_id",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "discogs_id": {
+            "id": "s;30f",
+            "name": "discogs_id",
+            "type": "number",
+            "number": {
+                "format": "number"
+            }
+        },
+        "barcode": {
+            "id": "s;50f",
+            "name": "barcode",
+            "type": "number",
+            "number": {
+                "format": "number"
             }
         }
+    }
     }
     headers = {
         "Accept": "application/json",
